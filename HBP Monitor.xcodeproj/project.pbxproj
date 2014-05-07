@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B02771401905DC3E0046D6E1 /* Blood Pressure.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B027713E1905DC3E0046D6E1 /* Blood Pressure.xcdatamodeld */; };
+		B02771481905DDCE0046D6E1 /* BloodSugar+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = B02771471905DDCE0046D6E1 /* BloodSugar+Create.m */; };
+		B027714C1905E2E50046D6E1 /* BloodSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = B027714B1905E2E50046D6E1 /* BloodSugar.m */; };
+		B027714F1905E6DE0046D6E1 /* AADataEntryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B027714E1905E6DE0046D6E1 /* AADataEntryVC.m */; };
+		B053BC0F190AED1A001BD50A /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B053BC0E190AED1A001BD50A /* Button.png */; };
+		B053BC12190AEDBB001BD50A /* Button2.png in Resources */ = {isa = PBXBuildFile; fileRef = B053BC11190AEDBB001BD50A /* Button2.png */; };
+		B053BC14190AEFE4001BD50A /* AddMeasurmentButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B053BC13190AEFE4001BD50A /* AddMeasurmentButton.png */; };
+		B0DA33A0190AFB15007679B2 /* BloodDrop.png in Resources */ = {isa = PBXBuildFile; fileRef = B0DA339F190AFB15007679B2 /* BloodDrop.png */; };
+		B0EDB50318EE1F5200A4E438 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EDB50218EE1F5200A4E438 /* Foundation.framework */; };
+		B0EDB50518EE1F5200A4E438 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EDB50418EE1F5200A4E438 /* CoreGraphics.framework */; };
+		B0EDB50718EE1F5200A4E438 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EDB50618EE1F5200A4E438 /* UIKit.framework */; };
+		B0EDB50D18EE1F5200A4E438 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0EDB50B18EE1F5200A4E438 /* InfoPlist.strings */; };
+		B0EDB50F18EE1F5200A4E438 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EDB50E18EE1F5200A4E438 /* main.m */; };
+		B0EDB51318EE1F5200A4E438 /* AAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EDB51218EE1F5200A4E438 /* AAAppDelegate.m */; };
+		B0EDB51618EE1F5200A4E438 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0EDB51418EE1F5200A4E438 /* Main.storyboard */; };
+		B0EDB51918EE1F5200A4E438 /* AAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EDB51818EE1F5200A4E438 /* AAViewController.m */; };
+		B0EDB51B18EE1F5200A4E438 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0EDB51A18EE1F5200A4E438 /* Images.xcassets */; };
+		B0EDB52218EE1F5200A4E438 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EDB52118EE1F5200A4E438 /* XCTest.framework */; };
+		B0EDB52318EE1F5200A4E438 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EDB50218EE1F5200A4E438 /* Foundation.framework */; };
+		B0EDB52418EE1F5200A4E438 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EDB50618EE1F5200A4E438 /* UIKit.framework */; };
+		B0EDB52C18EE1F5200A4E438 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0EDB52A18EE1F5200A4E438 /* InfoPlist.strings */; };
+		B0EDB52E18EE1F5200A4E438 /* HBP_MonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EDB52D18EE1F5200A4E438 /* HBP_MonitorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0EDB52518EE1F5200A4E438 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0EDB4F718EE1F5200A4E438 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0EDB4FE18EE1F5200A4E438;
+			remoteInfo = "HBP Monitor";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B027713F1905DC3E0046D6E1 /* Blood Pressure.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Blood Pressure.xcdatamodel"; sourceTree = "<group>"; };
+		B02771461905DDCE0046D6E1 /* BloodSugar+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BloodSugar+Create.h"; path = "../BloodSugar+Create.h"; sourceTree = "<group>"; };
+		B02771471905DDCE0046D6E1 /* BloodSugar+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BloodSugar+Create.m"; path = "../BloodSugar+Create.m"; sourceTree = "<group>"; };
+		B027714A1905E2E50046D6E1 /* BloodSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloodSugar.h; sourceTree = "<group>"; };
+		B027714B1905E2E50046D6E1 /* BloodSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloodSugar.m; sourceTree = "<group>"; };
+		B027714D1905E6DE0046D6E1 /* AADataEntryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AADataEntryVC.h; sourceTree = "<group>"; };
+		B027714E1905E6DE0046D6E1 /* AADataEntryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AADataEntryVC.m; sourceTree = "<group>"; };
+		B053BC0E190AED1A001BD50A /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
+		B053BC11190AEDBB001BD50A /* Button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button2.png; sourceTree = "<group>"; };
+		B053BC13190AEFE4001BD50A /* AddMeasurmentButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddMeasurmentButton.png; sourceTree = "<group>"; };
+		B0DA339F190AFB15007679B2 /* BloodDrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BloodDrop.png; sourceTree = "<group>"; };
+		B0EDB4FF18EE1F5200A4E438 /* HBP Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HBP Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0EDB50218EE1F5200A4E438 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B0EDB50418EE1F5200A4E438 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B0EDB50618EE1F5200A4E438 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B0EDB50A18EE1F5200A4E438 /* HBP Monitor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HBP Monitor-Info.plist"; sourceTree = "<group>"; };
+		B0EDB50C18EE1F5200A4E438 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B0EDB50E18EE1F5200A4E438 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B0EDB51018EE1F5200A4E438 /* HBP Monitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HBP Monitor-Prefix.pch"; sourceTree = "<group>"; };
+		B0EDB51118EE1F5200A4E438 /* AAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAAppDelegate.h; sourceTree = "<group>"; };
+		B0EDB51218EE1F5200A4E438 /* AAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAAppDelegate.m; sourceTree = "<group>"; };
+		B0EDB51518EE1F5200A4E438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0EDB51718EE1F5200A4E438 /* AAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAViewController.h; sourceTree = "<group>"; };
+		B0EDB51818EE1F5200A4E438 /* AAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAViewController.m; sourceTree = "<group>"; };
+		B0EDB51A18EE1F5200A4E438 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B0EDB52018EE1F5200A4E438 /* HBP MonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HBP MonitorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0EDB52118EE1F5200A4E438 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B0EDB52918EE1F5200A4E438 /* HBP MonitorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HBP MonitorTests-Info.plist"; sourceTree = "<group>"; };
+		B0EDB52B18EE1F5200A4E438 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B0EDB52D18EE1F5200A4E438 /* HBP_MonitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBP_MonitorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0EDB4FC18EE1F5200A4E438 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0EDB50518EE1F5200A4E438 /* CoreGraphics.framework in Frameworks */,
+				B0EDB50718EE1F5200A4E438 /* UIKit.framework in Frameworks */,
+				B0EDB50318EE1F5200A4E438 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0EDB51D18EE1F5200A4E438 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0EDB52218EE1F5200A4E438 /* XCTest.framework in Frameworks */,
+				B0EDB52418EE1F5200A4E438 /* UIKit.framework in Frameworks */,
+				B0EDB52318EE1F5200A4E438 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B02771411905DC730046D6E1 /* Data Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				B027713E1905DC3E0046D6E1 /* Blood Pressure.xcdatamodeld */,
+				B02771491905DDDF0046D6E1 /* Customized */,
+				B02771451905DD870046D6E1 /* AutoGenerated */,
+			);
+			name = "Data Stuff";
+			sourceTree = "<group>";
+		};
+		B02771451905DD870046D6E1 /* AutoGenerated */ = {
+			isa = PBXGroup;
+			children = (
+				B027714A1905E2E50046D6E1 /* BloodSugar.h */,
+				B027714B1905E2E50046D6E1 /* BloodSugar.m */,
+			);
+			name = AutoGenerated;
+			sourceTree = "<group>";
+		};
+		B02771491905DDDF0046D6E1 /* Customized */ = {
+			isa = PBXGroup;
+			children = (
+				B02771461905DDCE0046D6E1 /* BloodSugar+Create.h */,
+				B02771471905DDCE0046D6E1 /* BloodSugar+Create.m */,
+			);
+			name = Customized;
+			sourceTree = "<group>";
+		};
+		B053BC10190AED59001BD50A /* Button Images */ = {
+			isa = PBXGroup;
+			children = (
+				B0DA339F190AFB15007679B2 /* BloodDrop.png */,
+				B053BC13190AEFE4001BD50A /* AddMeasurmentButton.png */,
+				B053BC11190AEDBB001BD50A /* Button2.png */,
+				B053BC0E190AED1A001BD50A /* Button.png */,
+			);
+			name = "Button Images";
+			sourceTree = "<group>";
+		};
+		B0EDB4F618EE1F5200A4E438 = {
+			isa = PBXGroup;
+			children = (
+				B0EDB50818EE1F5200A4E438 /* HBP Monitor */,
+				B0EDB52718EE1F5200A4E438 /* HBP MonitorTests */,
+				B0EDB50118EE1F5200A4E438 /* Frameworks */,
+				B0EDB50018EE1F5200A4E438 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0EDB50018EE1F5200A4E438 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0EDB4FF18EE1F5200A4E438 /* HBP Monitor.app */,
+				B0EDB52018EE1F5200A4E438 /* HBP MonitorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0EDB50118EE1F5200A4E438 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0EDB50218EE1F5200A4E438 /* Foundation.framework */,
+				B0EDB50418EE1F5200A4E438 /* CoreGraphics.framework */,
+				B0EDB50618EE1F5200A4E438 /* UIKit.framework */,
+				B0EDB52118EE1F5200A4E438 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0EDB50818EE1F5200A4E438 /* HBP Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				B02771411905DC730046D6E1 /* Data Stuff */,
+				B0EDB51118EE1F5200A4E438 /* AAAppDelegate.h */,
+				B0EDB51218EE1F5200A4E438 /* AAAppDelegate.m */,
+				B0EDB51418EE1F5200A4E438 /* Main.storyboard */,
+				B027714D1905E6DE0046D6E1 /* AADataEntryVC.h */,
+				B027714E1905E6DE0046D6E1 /* AADataEntryVC.m */,
+				B0EDB51718EE1F5200A4E438 /* AAViewController.h */,
+				B0EDB51818EE1F5200A4E438 /* AAViewController.m */,
+				B0EDB51A18EE1F5200A4E438 /* Images.xcassets */,
+				B0EDB50918EE1F5200A4E438 /* Supporting Files */,
+			);
+			path = "HBP Monitor";
+			sourceTree = "<group>";
+		};
+		B0EDB50918EE1F5200A4E438 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B053BC10190AED59001BD50A /* Button Images */,
+				B0EDB50A18EE1F5200A4E438 /* HBP Monitor-Info.plist */,
+				B0EDB50B18EE1F5200A4E438 /* InfoPlist.strings */,
+				B0EDB50E18EE1F5200A4E438 /* main.m */,
+				B0EDB51018EE1F5200A4E438 /* HBP Monitor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0EDB52718EE1F5200A4E438 /* HBP MonitorTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0EDB52D18EE1F5200A4E438 /* HBP_MonitorTests.m */,
+				B0EDB52818EE1F5200A4E438 /* Supporting Files */,
+			);
+			path = "HBP MonitorTests";
+			sourceTree = "<group>";
+		};
+		B0EDB52818EE1F5200A4E438 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0EDB52918EE1F5200A4E438 /* HBP MonitorTests-Info.plist */,
+				B0EDB52A18EE1F5200A4E438 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0EDB4FE18EE1F5200A4E438 /* HBP Monitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0EDB53118EE1F5200A4E438 /* Build configuration list for PBXNativeTarget "HBP Monitor" */;
+			buildPhases = (
+				B0EDB4FB18EE1F5200A4E438 /* Sources */,
+				B0EDB4FC18EE1F5200A4E438 /* Frameworks */,
+				B0EDB4FD18EE1F5200A4E438 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HBP Monitor";
+			productName = "HBP Monitor";
+			productReference = B0EDB4FF18EE1F5200A4E438 /* HBP Monitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0EDB51F18EE1F5200A4E438 /* HBP MonitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0EDB53418EE1F5200A4E438 /* Build configuration list for PBXNativeTarget "HBP MonitorTests" */;
+			buildPhases = (
+				B0EDB51C18EE1F5200A4E438 /* Sources */,
+				B0EDB51D18EE1F5200A4E438 /* Frameworks */,
+				B0EDB51E18EE1F5200A4E438 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0EDB52618EE1F5200A4E438 /* PBXTargetDependency */,
+			);
+			name = "HBP MonitorTests";
+			productName = "HBP MonitorTests";
+			productReference = B0EDB52018EE1F5200A4E438 /* HBP MonitorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0EDB4F718EE1F5200A4E438 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AA;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Agency Agency";
+				TargetAttributes = {
+					B0EDB51F18EE1F5200A4E438 = {
+						TestTargetID = B0EDB4FE18EE1F5200A4E438;
+					};
+				};
+			};
+			buildConfigurationList = B0EDB4FA18EE1F5200A4E438 /* Build configuration list for PBXProject "HBP Monitor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0EDB4F618EE1F5200A4E438;
+			productRefGroup = B0EDB50018EE1F5200A4E438 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0EDB4FE18EE1F5200A4E438 /* HBP Monitor */,
+				B0EDB51F18EE1F5200A4E438 /* HBP MonitorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0EDB4FD18EE1F5200A4E438 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0EDB51B18EE1F5200A4E438 /* Images.xcassets in Resources */,
+				B053BC0F190AED1A001BD50A /* Button.png in Resources */,
+				B053BC12190AEDBB001BD50A /* Button2.png in Resources */,
+				B0EDB50D18EE1F5200A4E438 /* InfoPlist.strings in Resources */,
+				B0DA33A0190AFB15007679B2 /* BloodDrop.png in Resources */,
+				B053BC14190AEFE4001BD50A /* AddMeasurmentButton.png in Resources */,
+				B0EDB51618EE1F5200A4E438 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0EDB51E18EE1F5200A4E438 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0EDB52C18EE1F5200A4E438 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0EDB4FB18EE1F5200A4E438 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B02771401905DC3E0046D6E1 /* Blood Pressure.xcdatamodeld in Sources */,
+				B02771481905DDCE0046D6E1 /* BloodSugar+Create.m in Sources */,
+				B0EDB51318EE1F5200A4E438 /* AAAppDelegate.m in Sources */,
+				B0EDB51918EE1F5200A4E438 /* AAViewController.m in Sources */,
+				B0EDB50F18EE1F5200A4E438 /* main.m in Sources */,
+				B027714C1905E2E50046D6E1 /* BloodSugar.m in Sources */,
+				B027714F1905E6DE0046D6E1 /* AADataEntryVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0EDB51C18EE1F5200A4E438 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0EDB52E18EE1F5200A4E438 /* HBP_MonitorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0EDB52618EE1F5200A4E438 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0EDB4FE18EE1F5200A4E438 /* HBP Monitor */;
+			targetProxy = B0EDB52518EE1F5200A4E438 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0EDB50B18EE1F5200A4E438 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0EDB50C18EE1F5200A4E438 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B0EDB51418EE1F5200A4E438 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0EDB51518EE1F5200A4E438 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0EDB52A18EE1F5200A4E438 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0EDB52B18EE1F5200A4E438 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0EDB52F18EE1F5200A4E438 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		B0EDB53018EE1F5200A4E438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0EDB53218EE1F5200A4E438 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HBP Monitor/HBP Monitor-Prefix.pch";
+				INFOPLIST_FILE = "HBP Monitor/HBP Monitor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B0EDB53318EE1F5200A4E438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HBP Monitor/HBP Monitor-Prefix.pch";
+				INFOPLIST_FILE = "HBP Monitor/HBP Monitor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B0EDB53518EE1F5200A4E438 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HBP Monitor.app/HBP Monitor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HBP Monitor/HBP Monitor-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HBP MonitorTests/HBP MonitorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B0EDB53618EE1F5200A4E438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HBP Monitor.app/HBP Monitor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HBP Monitor/HBP Monitor-Prefix.pch";
+				INFOPLIST_FILE = "HBP MonitorTests/HBP MonitorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0EDB4FA18EE1F5200A4E438 /* Build configuration list for PBXProject "HBP Monitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0EDB52F18EE1F5200A4E438 /* Debug */,
+				B0EDB53018EE1F5200A4E438 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0EDB53118EE1F5200A4E438 /* Build configuration list for PBXNativeTarget "HBP Monitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0EDB53218EE1F5200A4E438 /* Debug */,
+				B0EDB53318EE1F5200A4E438 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0EDB53418EE1F5200A4E438 /* Build configuration list for PBXNativeTarget "HBP MonitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0EDB53518EE1F5200A4E438 /* Debug */,
+				B0EDB53618EE1F5200A4E438 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B027713E1905DC3E0046D6E1 /* Blood Pressure.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B027713F1905DC3E0046D6E1 /* Blood Pressure.xcdatamodel */,
+			);
+			currentVersion = B027713F1905DC3E0046D6E1 /* Blood Pressure.xcdatamodel */;
+			path = "Blood Pressure.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B0EDB4F718EE1F5200A4E438 /* Project object */;
+}

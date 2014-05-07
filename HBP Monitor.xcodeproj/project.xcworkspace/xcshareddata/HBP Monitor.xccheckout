@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4F44AC5D-4AA3-41AB-AD94-AA5932E5F554</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HBP Monitor</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9B9851A2-DF20-4856-AD33-4E327EF54C1F</key>
+		<string>https://github.com/JordanNg/HBP-Monitor.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HBP Monitor.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9B9851A2-DF20-4856-AD33-4E327EF54C1F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JordanNg/HBP-Monitor.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9B9851A2-DF20-4856-AD33-4E327EF54C1F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9B9851A2-DF20-4856-AD33-4E327EF54C1F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HBP Monitor</string>
+		</dict>
+	</array>
+</dict>
+</plist>
