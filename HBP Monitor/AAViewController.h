@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AAViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface AAViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextViewDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *context;
 

@@ -20,6 +20,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *inputVerticalConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *bloodReadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *notesLabel;
+@property (strong, nonatomic) id activeInput;
 
 @end
 
@@ -40,6 +43,9 @@
     //Save and Cancel buttons appear
     self.saveButton.alpha = 1;
     self.cancelButton.alpha = 1;
+    
+    self.bloodReadingLabel.alpha = 1;
+    self.notesLabel.alpha = 1;
 }
 
 - (IBAction)cancelMeasurementPressed:(UIButton *)sender {
@@ -48,6 +54,8 @@
     self.addMeasurementButton.alpha = 1;
     self.saveButton.alpha = 0;
     self.cancelButton.alpha = 0;
+    self.bloodReadingLabel.alpha = 0;
+    self.notesLabel.alpha = 0;
     
     //Resets data
     self.readings = [BloodSugar allReadingsInManagedObjectContext:self.context];
@@ -73,6 +81,8 @@
     self.saveButton.alpha = 0;
     self.cancelButton.alpha = 0;
     self.addMeasurementButton.alpha = 1;
+    self.bloodReadingLabel.alpha = 0;
+    self.notesLabel.alpha = 0;
     
     //Resets data
     self.readings = [BloodSugar allReadingsInManagedObjectContext:self.context];
@@ -177,31 +187,48 @@
 // Called when the UIKeyboardDidShowNotification is sent.
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
-    self.inputVerticalConstraint.constant = 300.0;
-    NSLog(@"Keyboard was shown");
-//    NSDictionary* info = [aNotification userInfo];
-//    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-//    
-//    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
-//    scrollView.contentInset = contentInsets;
-//    scrollView.scrollIndicatorInsets = contentInsets;
-//    
-//    // If active text field is hidden by keyboard, scroll it so it's visible
-//    // Your app might not need or want this behavior.
-//    CGRect aRect = self.view.frame;
-//    aRect.size.height -= kbSize.height;
-//    if (!CGRectContainsPoint(aRect, activeField.frame.origin) ) {
-//        [self.scrollView scrollRectToVisible:activeField.frame animated:YES];
-//    }
+    if (self.activeInput == self.notesTextView) {
+        self.inputVerticalConstraint.constant = 350.0;
+
+        [UIView animateWithDuration:0.25
+                              delay:0.0
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             [self.view layoutIfNeeded];
+                         }
+                         completion:^(BOOL finished) {
+                         }];
+    }
 }
 
 // Called when the UIKeyboardWillHideNotification is sent
 - (void)keyboardWillBeHidden:(NSNotification*)aNotification
 {
-    self.inputVerticalConstraint.constant = 20.0;
-//    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
-//    scrollView.contentInset = contentInsets;
-//    scrollView.scrollIndicatorInsets = contentInsets;
-    NSLog(@"Keyboard was hidden");
+    if (self.activeInput == self.notesTextView) {
+        self.inputVerticalConstraint.constant = 20.0;
+        
+        
+        [UIView animateWithDuration:0.25
+                              delay:0.0
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             [self.view layoutIfNeeded];
+                         }
+                         completion:^(BOOL finished) {
+                         }];
+    }
 }
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    self.activeInput = textView;
+    NSLog(@"HI");
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    self.activeInput = nil;
+    NSLog(@"BYE");
+}
+
 @end
