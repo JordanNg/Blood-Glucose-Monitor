@@ -50,7 +50,7 @@
     
     if (!matches || ([matches count] < 1)) {
         // handle error
-        NSAssert(NO, @"wrong number of matches returned.");
+        NSLog(@"No blood sugar readings found.");
         
     } else {
         NSLog(@"Readings loaded: %lu", (unsigned long)[matches count]);

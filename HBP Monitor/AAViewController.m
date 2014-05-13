@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *bloodReadingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *notesLabel;
 @property (strong, nonatomic) id activeInput;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *markerXConstraint;
+@property (weak, nonatomic) IBOutlet UIView *scaleFrameView;
 
 @end
 
@@ -107,12 +109,13 @@
     _context = context;
     NSLog(@"context set!");
     [self reloadData];
-    
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
-    
-    BloodSugar *reading = self.readings[indexPath.row];
-    [self displayReading:reading];
+    if (self.readings) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+        
+        BloodSugar *reading = self.readings[indexPath.row];
+        [self displayReading:reading];
+    }
 }
 
 -(NSString *)formattedReadingDate:(NSDate *)date
@@ -126,23 +129,30 @@
 
 - (void)viewDidLoad
 {
+ 
     [super viewDidLoad];
     
     [self registerForKeyboardNotifications];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     //    AAAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     //    self.context = delegate.managedObjectContext;
+    
+    [self.readingTextField addTarget:self action:@selector(readingTextFieldChanged) forControlEvents:UIControlEventEditingChanged];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Reading Cell" forIndexPath:indexPath];
     BloodSugar *reading = (BloodSugar *)self.readings[indexPath.row];
     NSLog(@"%@", reading);
     
     
     cell.textLabel.text = [[reading bloodReading] description];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", [[reading bloodReading] description],
+    cell.textLabel.text = [NSString stringWithFormat:@"%@   %@", [[reading bloodReading] description],
                            [self formattedReadingDate:reading.readingTime]];
     cell.detailTextLabel.text = [reading.notes description];
 //    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", reading.notes, [[reading bloodReading] description]];
@@ -169,6 +179,8 @@
     self.notesTextView.text = [reading.notes description];
     
     [self.datePicker setDate:reading.readingTime animated:YES];
+    
+    [self animateMarker];
 }
 
 // Call this method somewhere in your view controller setup code.
@@ -229,6 +241,36 @@
 {
     self.activeInput = nil;
     NSLog(@"BYE");
+}
+
+-(CGFloat) markerXPosition
+{
+    
+    CGFloat reading = [self.readingTextField.text floatValue];
+    
+    CGFloat bgMin = 0.0;
+    CGFloat bgMax = 200.0;
+    CGFloat r = MAX(bgMin, MIN(bgMax, reading));
+    
+    CGFloat bgRange = bgMax - bgMin;
+    CGFloat x = r * self.scaleFrameView.bounds.size.width / bgRange;
+    return x;
+}
+
+- (void) animateMarker
+{
+    self.markerXConstraint.constant = [self markerXPosition];
+    [UIView animateWithDuration:2.0 delay:0.0
+                        options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionAllowAnimatedContent
+                     animations:^{
+                         [self.scaleFrameView.superview layoutIfNeeded];
+                     }
+                     completion:nil];
+
+}
+- (void) readingTextFieldChanged
+{
+    [self animateMarker];
 }
 
 @end
