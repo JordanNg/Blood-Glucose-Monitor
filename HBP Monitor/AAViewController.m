@@ -202,7 +202,7 @@
     if (self.activeInput == self.notesTextView) {
         self.inputVerticalConstraint.constant = 350.0;
 
-        [UIView animateWithDuration:0.25
+        [UIView animateWithDuration:0.15
                               delay:0.0
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{

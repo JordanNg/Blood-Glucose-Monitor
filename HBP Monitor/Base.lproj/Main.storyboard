@@ -147,82 +147,82 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ind-K6-E3l" userLabel="ScaleFrame">
-                                        <rect key="frame" x="15" y="125" width="583" height="83"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ind-K6-E3l" userLabel="ScaleFrame">
+                                        <rect key="frame" x="15" y="125" width="583" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKv-vj-yIx">
-                                                <rect key="frame" x="9" y="6" width="565" height="71"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKv-vj-yIx">
+                                                <rect key="frame" x="9" y="6" width="565" height="37"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ibj-hx-vKv">
-                                                        <rect key="frame" x="85" y="0.0" width="422" height="71"/>
+                                                        <rect key="frame" x="168" y="0.0" width="347" height="37"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jLI-1U-UBM">
-                                                                <rect key="frame" x="59" y="0.0" width="262" height="71"/>
+                                                                <rect key="frame" x="86" y="0.0" width="121" height="37"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <color key="backgroundColor" red="0.03626506026244547" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" red="0.31045236895161288" green="1" blue="0.296875" alpha="1" colorSpace="calibratedRGB"/>
                                                             </view>
                                                         </subviews>
                                                         <color key="backgroundColor" red="1" green="0.51606260886789213" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZM-zm-THL" userLabel="markerView">
+                                                        <rect key="frame" x="115" y="0.0" width="6" height="37"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="37" id="F30-sH-LVm"/>
+                                                            <constraint firstAttribute="width" constant="6" id="u4j-2c-qub"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.047118742969354588" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZM-zm-THL" userLabel="markerView">
-                                                <rect key="frame" x="297" y="6" width="6" height="71"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="71" id="F30-sH-LVm"/>
-                                                    <constraint firstAttribute="width" constant="6" id="u4j-2c-qub"/>
+                                                    <constraint firstItem="sZM-zm-THL" firstAttribute="leading" secondItem="rKv-vj-yIx" secondAttribute="leading" constant="115" id="1od-Ow-e7x"/>
+                                                    <constraint firstItem="sZM-zm-THL" firstAttribute="top" secondItem="rKv-vj-yIx" secondAttribute="top" id="PV3-Aq-osC"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="sZM-zm-THL" firstAttribute="top" secondItem="ind-K6-E3l" secondAttribute="top" constant="6" id="1Ip-gQ-cPZ"/>
-                                            <constraint firstItem="sZM-zm-THL" firstAttribute="leading" secondItem="ind-K6-E3l" secondAttribute="leading" constant="297" id="M07-rk-Mhp"/>
-                                        </constraints>
                                     </view>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 (mg/dL)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lox-YY-eZx">
-                                        <rect key="frame" x="15" y="210" width="83" height="33"/>
+                                        <rect key="frame" x="15" y="173" width="83" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPE-tI-vL1">
-                                        <rect key="frame" x="106" y="210" width="24" height="33"/>
+                                        <rect key="frame" x="184" y="173" width="24" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="90" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bz-BJ-taw">
-                                        <rect key="frame" x="160" y="210" width="26" height="33"/>
+                                        <rect key="frame" x="270" y="173" width="26" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="130" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks9-2f-BHC">
-                                        <rect key="frame" x="420" y="210" width="40" height="33"/>
+                                        <rect key="frame" x="384" y="173" width="40" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="180" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTS-PI-7PM">
-                                        <rect key="frame" x="518" y="210" width="38" height="33"/>
+                                        <rect key="frame" x="518" y="173" width="38" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzS-X7-aZc">
-                                        <rect key="frame" x="564" y="216" width="48" height="21"/>
+                                        <rect key="frame" x="564" y="179" width="48" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -286,7 +286,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="cancelButton" destination="WfS-zA-aUF" id="fD3-NP-SmO"/>
                         <outlet property="datePicker" destination="uWb-pk-YNS" id="nlH-MB-HQK"/>
                         <outlet property="inputVerticalConstraint" destination="RIU-bb-t4z" id="0KD-Uk-uMv"/>
-                        <outlet property="markerXConstraint" destination="M07-rk-Mhp" id="iox-zJ-cU7"/>
+                        <outlet property="markerXConstraint" destination="1od-Ow-e7x" id="YqT-Xx-P9n"/>
                         <outlet property="notesLabel" destination="rdG-xL-CnN" id="tHk-sU-cCa"/>
                         <outlet property="notesTextView" destination="FoN-Pr-Ags" id="28a-IU-UPC"/>
                         <outlet property="readingTextField" destination="K7u-z3-grN" id="FEq-UJ-Yh7"/>
