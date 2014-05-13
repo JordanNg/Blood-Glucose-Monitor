@@ -156,11 +156,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ibj-hx-vKv">
-                                                        <rect key="frame" x="168" y="0.0" width="347" height="37"/>
+                                                        <rect key="frame" x="171" y="0.0" width="338" height="37"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jLI-1U-UBM">
-                                                                <rect key="frame" x="86" y="0.0" width="121" height="37"/>
+                                                                <rect key="frame" x="86" y="0.0" width="110" height="37"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" red="0.31045236895161288" green="1" blue="0.296875" alpha="1" colorSpace="calibratedRGB"/>
                                                             </view>

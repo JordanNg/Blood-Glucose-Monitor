@@ -202,7 +202,7 @@
     if (self.activeInput == self.notesTextView) {
         self.inputVerticalConstraint.constant = 350.0;
 
-        [UIView animateWithDuration:0.15
+        [UIView animateWithDuration:0.25
                               delay:0.0
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
@@ -249,7 +249,7 @@
     CGFloat reading = [self.readingTextField.text floatValue];
     
     CGFloat bgMin = 0.0;
-    CGFloat bgMax = 200.0;
+    CGFloat bgMax = 208.0;
     CGFloat r = MAX(bgMin, MIN(bgMax, reading));
     
     CGFloat bgRange = bgMax - bgMin;
