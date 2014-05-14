@@ -60,8 +60,7 @@
     self.notesLabel.alpha = 0;
     
     //Resets data
-    self.readings = [BloodSugar allReadingsInManagedObjectContext:self.context];
-    [self.tableView reloadData];
+    [self reloadData];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
@@ -87,8 +86,7 @@
     self.notesLabel.alpha = 0;
     
     //Resets data
-    self.readings = [BloodSugar allReadingsInManagedObjectContext:self.context];
-    [self.tableView reloadData];
+    [self reloadData];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
@@ -102,6 +100,7 @@
 {
     self.readings = [BloodSugar allReadingsInManagedObjectContext:self.context];
     [self.tableView reloadData];
+    [self.myGraph reloadGraph];
 }
 
 - (void)setContext:(NSManagedObjectContext *)context
@@ -142,6 +141,7 @@
 }
 
 - (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
+    NSLog(@" number of lines %i", [self.readings count]);
     return [self.readings count]; // Number of points in the graph.
 }
 
