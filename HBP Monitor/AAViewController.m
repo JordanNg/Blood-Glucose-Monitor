@@ -25,6 +25,8 @@
 @property (strong, nonatomic) id activeInput;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *markerXConstraint;
 @property (weak, nonatomic) IBOutlet UIView *scaleFrameView;
+@property (weak, nonatomic) IBOutlet BEMSimpleLineGraphView *simpleLineGraph;
+@property (strong, nonatomic) UIColor *colorXaxisLabel;
 
 @end
 
@@ -139,6 +141,40 @@
     //    self.context = delegate.managedObjectContext;
     
     [self.readingTextField addTarget:self action:@selector(readingTextFieldChanged) forControlEvents:UIControlEventEditingChanged];
+    
+    BEMSimpleLineGraphView *simpleLineGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+    simpleLineGraph.delegate = self;
+    [self.view addSubview:simpleLineGraph];
+    
+    [self.simpleLineGraph reloadGraph];
+    
+    self.simpleLineGraph.enableTouchReport = YES;
+    
+    self.simpleLineGraph.enableBezierCurve = YES;
+}
+
+- (void)lineGraph:(BEMSimpleLineGraphView *)graph didTouchGraphWithClosestIndex:(NSInteger)index {
+    // Here you could change the text of a UILabel with the value of the closest index for example.
+}
+
+- (void)lineGraph:(BEMSimpleLineGraphView *)graph didReleaseTouchFromGraphWithClosestIndex:(CGFloat)index {
+    // Set the UIlabel alpha to 0 for example.
+}
+
+- (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
+    return 5; // The number of hidden labels between each displayed label.
+}
+
+- (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
+    return @"Blood Sugar";
+}
+
+- (UIColor *)lineGraph:(BEMSimpleLineGraphView *)graph lineColorForIndex:(NSInteger)index {
+    return [UIColor whiteColor];
+}
+
+- (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph lineAlphaForIndex:(NSInteger)index {
+    return 1.0;
 }
 
 
@@ -272,5 +308,14 @@
 {
     [self animateMarker];
 }
+
+- (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
+    return 10; // Number of points in the graph.
+}
+
+- (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
+    return 10; // The value of the point on the Y-Axis for the index.
+}
+
 
 @end

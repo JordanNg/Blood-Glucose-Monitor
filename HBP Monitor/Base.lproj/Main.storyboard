@@ -236,16 +236,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <color key="textColor" red="0.62609797300000003" green="0.62609797300000003" blue="0.62609797300000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ik8-bB-Dsu">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ik8-bB-Dsu" customClass="BEMSimpleLineGraphView">
                                         <rect key="frame" x="15" y="530" width="583" height="134"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QAo-gW-KGl">
-                                                <rect key="frame" x="282" y="57" width="19" height="19"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <color key="backgroundColor" red="0.58532464919869875" green="1" blue="0.95121460516796863" alpha="1" colorSpace="calibratedRGB"/>
-                                            </view>
-                                        </subviews>
                                         <color key="backgroundColor" red="0.8741629464285714" green="0.8741629464285714" blue="0.8741629464285714" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
@@ -312,6 +305,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="readingTextField" destination="K7u-z3-grN" id="FEq-UJ-Yh7"/>
                         <outlet property="saveButton" destination="Rq2-M8-ZZm" id="L5O-Yp-TgX"/>
                         <outlet property="scaleFrameView" destination="ind-K6-E3l" id="YR4-y7-FIh"/>
+                        <outlet property="simpleLineGraph" destination="Ik8-bB-Dsu" id="OZA-ed-2NQ"/>
                         <outlet property="tableView" destination="y1x-Kg-voG" id="Z9H-Nx-j1q"/>
                     </connections>
                 </viewController>

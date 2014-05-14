@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BEMSimpleLineGraphView.h"
 
-@interface AAViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextViewDelegate>
-
+@interface AAViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, BEMSimpleLineGraphDelegate>
 @property (nonatomic, strong) NSManagedObjectContext *context;
 
 
