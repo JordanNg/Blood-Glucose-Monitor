@@ -155,11 +155,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ind-K6-E3l" userLabel="ScaleFrame">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ind-K6-E3l" userLabel="ScaleFrame">
                                         <rect key="frame" x="15" y="92" width="583" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKv-vj-yIx">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKv-vj-yIx">
                                                 <rect key="frame" x="9" y="6" width="565" height="37"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
@@ -188,11 +188,19 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                 <color key="backgroundColor" red="1" green="0.047118742969354588" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="sZM-zm-THL" firstAttribute="leading" secondItem="rKv-vj-yIx" secondAttribute="leading" constant="115" id="1od-Ow-e7x"/>
+                                                    <constraint firstAttribute="height" constant="37" id="CW2-9g-wUH"/>
                                                     <constraint firstItem="sZM-zm-THL" firstAttribute="top" secondItem="rKv-vj-yIx" secondAttribute="top" id="PV3-Aq-osC"/>
+                                                    <constraint firstAttribute="width" constant="565" id="Q0S-ET-rnY"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="rKv-vj-yIx" firstAttribute="top" secondItem="ind-K6-E3l" secondAttribute="top" constant="6" id="ChM-7V-sGu"/>
+                                            <constraint firstAttribute="height" constant="49" id="klU-Yn-pJB"/>
+                                            <constraint firstAttribute="width" constant="583" id="m4H-oD-JeF"/>
+                                            <constraint firstItem="rKv-vj-yIx" firstAttribute="leading" secondItem="ind-K6-E3l" secondAttribute="leading" constant="9" id="qgE-ze-2lq"/>
+                                        </constraints>
                                     </view>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 (mg/dL)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lox-YY-eZx">
                                         <rect key="frame" x="15" y="149" width="95" height="33"/>
@@ -239,13 +247,18 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ik8-bB-Dsu" customClass="BEMSimpleLineGraphView">
                                         <rect key="frame" x="15" y="530" width="583" height="134"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.8741629464285714" green="0.8741629464285714" blue="0.8741629464285714" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.1886076038" blue="0.083912424979999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="SEL-6Z-xnl"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="664" id="cgo-G6-HwL"/>
                                     <constraint firstAttribute="width" constant="598" id="gqv-qN-aBj"/>
+                                    <constraint firstItem="ind-K6-E3l" firstAttribute="top" secondItem="p6H-9F-ypb" secondAttribute="top" constant="92" id="kxy-5q-EvF"/>
+                                    <constraint firstItem="ind-K6-E3l" firstAttribute="leading" secondItem="p6H-9F-ypb" secondAttribute="leading" constant="15" id="p3e-2Q-qvh"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIP-Sj-ODU">
@@ -300,12 +313,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="datePicker" destination="uWb-pk-YNS" id="nlH-MB-HQK"/>
                         <outlet property="inputVerticalConstraint" destination="RIU-bb-t4z" id="0KD-Uk-uMv"/>
                         <outlet property="markerXConstraint" destination="1od-Ow-e7x" id="YqT-Xx-P9n"/>
+                        <outlet property="myGraph" destination="Ik8-bB-Dsu" id="tvD-oB-RhC"/>
                         <outlet property="notesLabel" destination="rdG-xL-CnN" id="tHk-sU-cCa"/>
                         <outlet property="notesTextView" destination="FoN-Pr-Ags" id="28a-IU-UPC"/>
                         <outlet property="readingTextField" destination="K7u-z3-grN" id="FEq-UJ-Yh7"/>
                         <outlet property="saveButton" destination="Rq2-M8-ZZm" id="L5O-Yp-TgX"/>
                         <outlet property="scaleFrameView" destination="ind-K6-E3l" id="YR4-y7-FIh"/>
-                        <outlet property="simpleLineGraph" destination="Ik8-bB-Dsu" id="OZA-ed-2NQ"/>
                         <outlet property="tableView" destination="y1x-Kg-voG" id="Z9H-Nx-j1q"/>
                     </connections>
                 </viewController>
