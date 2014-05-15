@@ -138,16 +138,30 @@
     //    self.context = delegate.managedObjectContext;
     
     [self.readingTextField addTarget:self action:@selector(readingTextFieldChanged) forControlEvents:UIControlEventEditingChanged];
+
 }
 
 - (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
     NSLog(@" number of lines %i", [self.readings count]);
-    return [self.readings count]; // Number of points in the graph.
+    return MIN(10, [self.readings count]); // Number of points in the graph.
 }
 
 - (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
     BloodSugar *reading = [self.readings objectAtIndex:index];
     return [reading.bloodReading floatValue]; // The value of the point on the Y-Axis for the index.
+}
+
+- (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
+    return 0; // The number of hidden labels between each displayed label.
+}
+
+- (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
+    BloodSugar *reading = [self.readings objectAtIndex:index];
+//    NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:(NSMonthCalendarUnit | NSYearCalendarUnit) fromDate:reading.readingTime];
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"MMM/dd"];
+    NSString *dateString = [format stringFromDate:reading.readingTime];
+    return [NSString stringWithFormat:@"%@", dateString];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
