@@ -117,7 +117,6 @@
 /// If set to yes, the graph will respond to touch events. The 2 methods above should therefore be implemented. Default value is NO.
 @property (nonatomic) BOOL enableTouchReport;
 
-
 /// The way the graph is drawn, with or withough bezier curved lines. Default value is NO;
 @property (nonatomic) BOOL enableBezierCurve;
 

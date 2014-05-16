@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet BEMSimpleLineGraphView *myGraph;
 
 @property (nonatomic, strong) NSManagedObjectContext *context;
+@property (strong, nonatomic) UIColor *bottomColor;
 
 @end

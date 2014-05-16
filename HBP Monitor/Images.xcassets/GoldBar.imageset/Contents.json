@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "SaveIcon.png"
+      "filename" : "GoldBar.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "SaveIcon2x.png"
+      "filename" : "GoldBar2x.png"
     }
   ],
   "info" : {

@@ -34,7 +34,6 @@
     /// All of the Data Points
     NSMutableArray *dataPoints;
 }
-
 /// The vertical line which appears when the user drags across the graph
 @property (strong, nonatomic) UIView *verticalLine;
 
@@ -46,6 +45,18 @@
 
 /// The gesture recognizer picking up the pan in the graph view
 @property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
+
+/// The label displayed when enablePopUpReport is set to YES
+@property (strong, nonatomic) UILabel *popUpLabel;
+
+/// The view used for the background of the popup label
+@property (strong, nonatomic) UIView *popUpView;
+
+/// The X position (center) of the view for the popup label
+@property (assign) CGFloat xCenterLabel;
+
+/// The Y position (center) of the view for the popup label
+@property (assign) CGFloat yCenterLabel;
 
 /// Find which dot is currently the closest to the vertical line
 - (BEMCircle *)closestDotFromVerticalLine:(UIView *)verticalLine;

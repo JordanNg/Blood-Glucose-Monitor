@@ -25,6 +25,8 @@
 @property (strong, nonatomic) id activeInput;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *markerXConstraint;
 @property (weak, nonatomic) IBOutlet UIView *scaleFrameView;
+@property (strong, nonatomic) BloodSugar *currentlyDisplayedReading;
+@property (strong, nonatomic) NSArray *lineGraphReadings;
 
 @end
 
@@ -48,6 +50,8 @@
     
     self.bloodReadingLabel.alpha = 1;
     self.notesLabel.alpha = 1;
+    
+    self.currentlyDisplayedReading = nil;
 }
 
 - (IBAction)cancelMeasurementPressed:(UIButton *)sender {
@@ -71,11 +75,21 @@
 
 - (IBAction)saveButtonPressed:(UIButton *)sender {
     
-    NSLog (@"hi");
-    [BloodSugar createReading:@([self.readingTextField.text intValue])
-                  readingTime:self.datePicker.date
-                        notes:self.notesTextView.text
-         managedObjectContext:self.context];
+    [self saveReading];
+}
+
+- (void)saveReading {
+    
+    if (!self.currentlyDisplayedReading) {
+        self.currentlyDisplayedReading = [BloodSugar createReading:@([self.readingTextField.text intValue])
+                                                       readingTime:self.datePicker.date
+                                                             notes:self.notesTextView.text
+                                              managedObjectContext:self.context];
+    }
+    self.currentlyDisplayedReading.bloodReading = @([self.readingTextField.text intValue]);
+    self.currentlyDisplayedReading.readingTime =self.datePicker.date;
+    self.currentlyDisplayedReading.notes = self.notesTextView.text;
+
     [self reloadData];
     
     //Buttons change back
@@ -139,15 +153,21 @@
     
     [self.readingTextField addTarget:self action:@selector(readingTextFieldChanged) forControlEvents:UIControlEventEditingChanged];
 
+    self.myGraph.enableBezierCurve = NO;
+    self.myGraph.widthLine = 4;
+
+    self.myGraph.colorTop = [UIColor colorWithRed:255.0/255.0 green:223.0/255.0 blue:0.0/255.0 alpha:1.0];
+    self.myGraph.colorBottom = [UIColor colorWithRed:255.0/255.0 green:223.0/255.0 blue:0.0/255.0 alpha:1.0];
+    self.myGraph.colorXaxisLabel = [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0];
 }
 
 - (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
-    NSLog(@" number of lines %i", [self.readings count]);
-    return MIN(10, [self.readings count]); // Number of points in the graph.
+    NSLog(@" number of lines %i", [self.lineGraphReadings count]);
+    return MIN(7, [self.lineGraphReadings count]); // Number of points in the graph.
 }
 
 - (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
-    BloodSugar *reading = [self.readings objectAtIndex:index];
+    BloodSugar *reading = [self.lineGraphReadings objectAtIndex:index];
     return [reading.bloodReading floatValue]; // The value of the point on the Y-Axis for the index.
 }
 
@@ -155,13 +175,30 @@
     return 0; // The number of hidden labels between each displayed label.
 }
 
+- (UIColor *)lineGraph:(BEMSimpleLineGraphView *)graph lineColorForIndex:(NSInteger)index {
+    return [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0];
+}
+
 - (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
-    BloodSugar *reading = [self.readings objectAtIndex:index];
-//    NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:(NSMonthCalendarUnit | NSYearCalendarUnit) fromDate:reading.readingTime];
+    BloodSugar *reading = [self.lineGraphReadings objectAtIndex:index];
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     [format setDateFormat:@"MMM/dd"];
     NSString *dateString = [format stringFromDate:reading.readingTime];
     return [NSString stringWithFormat:@"%@", dateString];
+    
+    
+}
+
+- (void) setReadings:(NSArray *)readings{
+    _readings = readings;
+    NSArray *smallArray = [readings subarrayWithRange:NSMakeRange(0, 10)];
+    
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:[smallArray count]];
+    NSEnumerator *enumerator = [smallArray reverseObjectEnumerator];
+    for (id element in enumerator) {
+        [array addObject:element];
+    }
+    self.lineGraphReadings = array;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -202,6 +239,8 @@
     [self.datePicker setDate:reading.readingTime animated:YES];
     
     [self animateMarker];
+    
+    self.currentlyDisplayedReading = reading;
 }
 
 // Call this method somewhere in your view controller setup code.
@@ -292,6 +331,19 @@
 - (void) readingTextFieldChanged
 {
     [self animateMarker];
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"])
+    {
+        [self saveReading];
+        
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end
