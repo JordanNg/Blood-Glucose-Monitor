@@ -52,7 +52,26 @@
     self.notesLabel.alpha = 1;
     
     self.currentlyDisplayedReading = nil;
+    
+   
+    [self.readingTextField becomeFirstResponder];
+
 }
+
+//- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+//{
+//    if(textField == self.readingTextField)
+//    {
+//        [self.readingTextField becomeFirstResponder];
+//        return YES;
+//    }
+//    return YES;
+//}
+//
+//- (void)textFieldDidEndEditing:(UITextField *)textField
+//{
+//    [self.notesTextView becomeFirstResponder];
+//}
 
 - (IBAction)cancelMeasurementPressed:(UIButton *)sender {
     
@@ -142,7 +161,7 @@
 
 - (void)viewDidLoad
 {
- 
+    
     [super viewDidLoad];
     
     [self registerForKeyboardNotifications];
@@ -152,17 +171,17 @@
     //    self.context = delegate.managedObjectContext;
     
     [self.readingTextField addTarget:self action:@selector(readingTextFieldChanged) forControlEvents:UIControlEventEditingChanged];
-
+    
     self.myGraph.enableBezierCurve = NO;
     self.myGraph.widthLine = 4;
-
+    
     self.myGraph.colorTop = [UIColor colorWithRed:255.0/255.0 green:223.0/255.0 blue:0.0/255.0 alpha:1.0];
     self.myGraph.colorBottom = [UIColor colorWithRed:255.0/255.0 green:223.0/255.0 blue:0.0/255.0 alpha:1.0];
     self.myGraph.colorXaxisLabel = [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0];
 }
 
 - (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
-    NSLog(@" number of lines %i", [self.lineGraphReadings count]);
+    NSLog(@" number of lines %lu", (unsigned long)[self.lineGraphReadings count]);
     return MIN(7, [self.lineGraphReadings count]); // Number of points in the graph.
 }
 
@@ -191,7 +210,7 @@
 
 - (void) setReadings:(NSArray *)readings{
     _readings = readings;
-    NSArray *smallArray = [readings subarrayWithRange:NSMakeRange(0, 10)];
+    NSArray *smallArray = [readings subarrayWithRange:NSMakeRange(0, 7)];
     
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:[smallArray count]];
     NSEnumerator *enumerator = [smallArray reverseObjectEnumerator];
@@ -213,8 +232,8 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%@   %@", [[reading bloodReading] description],
                            [self formattedReadingDate:reading.readingTime]];
     cell.detailTextLabel.text = [reading.notes description];
-//    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", reading.notes, [[reading bloodReading] description]];
-//    cell.detailTextLabel.text = [reading.readingTime description];
+    //    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", reading.notes, [[reading bloodReading] description]];
+    //    cell.detailTextLabel.text = [reading.readingTime description];
     return cell;
     
 }
@@ -261,7 +280,7 @@
 {
     if (self.activeInput == self.notesTextView) {
         self.inputVerticalConstraint.constant = 350.0;
-
+        
         [UIView animateWithDuration:0.25
                               delay:0.0
                             options:UIViewAnimationOptionCurveEaseInOut
@@ -294,13 +313,11 @@
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
     self.activeInput = textView;
-    NSLog(@"HI");
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     self.activeInput = nil;
-    NSLog(@"BYE");
 }
 
 -(CGFloat) markerXPosition
@@ -326,7 +343,7 @@
                          [self.scaleFrameView.superview layoutIfNeeded];
                      }
                      completion:nil];
-
+    
 }
 - (void) readingTextFieldChanged
 {
