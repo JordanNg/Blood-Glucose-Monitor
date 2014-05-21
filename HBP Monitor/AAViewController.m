@@ -53,17 +53,10 @@
     
     self.currentlyDisplayedReading = nil;
     
-   
+   //Set focus to the Blood Sugar Reading Label
     [self.readingTextField becomeFirstResponder];
 
 }
-//
-//-(BOOL)textFieldShouldReturn:(UITextField *)textField
-//{
-//    if ( textField == self.readingTextField ) { [self.notesTextView becomeFirstResponder]; }
-//    if ( textField == self.notesTextView ) { [self yourLoginRoutine]; return YES; }
-//    return YES;
-//}
 
 - (IBAction)cancelMeasurementPressed:(UIButton *)sender {
     

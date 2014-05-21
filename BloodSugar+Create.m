@@ -47,9 +47,10 @@
     
     NSError *error;
     NSArray *matches = [context executeFetchRequest:request error:&error];
-    
+//    
     if (!matches || ([matches count] < 1)) {
         // handle error
+        
         NSLog(@"No blood sugar readings found.");
         
     } else {
