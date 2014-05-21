@@ -146,7 +146,6 @@
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
     
     [self registerForKeyboardNotifications];
@@ -167,10 +166,12 @@
 
 - (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
     NSLog(@" number of lines %lu", (unsigned long)[self.lineGraphReadings count]);
+    if (![self.lineGraphReadings count]) return 0;
     return MIN(7, [self.lineGraphReadings count]); // Number of points in the graph.
 }
 
 - (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
+    if (![self.lineGraphReadings count]) return 0;
     BloodSugar *reading = [self.lineGraphReadings objectAtIndex:index];
     return [reading.bloodReading floatValue]; // The value of the point on the Y-Axis for the index.
 }
@@ -184,13 +185,12 @@
 }
 
 - (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
+    if (![self.lineGraphReadings count]) return @"";
     BloodSugar *reading = [self.lineGraphReadings objectAtIndex:index];
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     [format setDateFormat:@"MMM/dd"];
     NSString *dateString = [format stringFromDate:reading.readingTime];
     return [NSString stringWithFormat:@"%@", dateString];
-    
-    
 }
 
 - (void) setReadings:(NSArray *)readings{
