@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>78909C0A-5008-49E1-8FE2-19847A1D707A</string>
+	<string>DB677472-9356-4474-892F-12610978B45A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>HBP Monitor</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>FCDC2830-A4E1-4845-9C8A-2FBD63D9B379</key>
-		<string>https://github.com/JordanNg/Blood-Glucose-Monitor.git</string>
+		<key>890E5CE6-ADE7-405C-9AD2-71AD656F34B0</key>
+		<string>https://github.com/JordanNg/Blood-Glucose-Monitor</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>HBP Monitor.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>FCDC2830-A4E1-4845-9C8A-2FBD63D9B379</key>
+		<key>890E5CE6-ADE7-405C-9AD2-71AD656F34B0</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/JordanNg/Blood-Glucose-Monitor.git</string>
+	<string>https://github.com/JordanNg/Blood-Glucose-Monitor</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>FCDC2830-A4E1-4845-9C8A-2FBD63D9B379</string>
+	<string>890E5CE6-ADE7-405C-9AD2-71AD656F34B0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FCDC2830-A4E1-4845-9C8A-2FBD63D9B379</string>
+			<string>890E5CE6-ADE7-405C-9AD2-71AD656F34B0</string>
 			<key>IDESourceControlWCCName</key>
-			<string>HBP-Monitor-master</string>
+			<string>Blood-Glucose-Monitor</string>
 		</dict>
 	</array>
 </dict>
