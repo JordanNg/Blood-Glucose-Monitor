@@ -57,20 +57,12 @@
     [self.readingTextField becomeFirstResponder];
 
 }
-
-//- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-//{
-//    if(textField == self.readingTextField)
-//    {
-//        [self.readingTextField becomeFirstResponder];
-//        return YES;
-//    }
-//    return YES;
-//}
 //
-//- (void)textFieldDidEndEditing:(UITextField *)textField
+//-(BOOL)textFieldShouldReturn:(UITextField *)textField
 //{
-//    [self.notesTextView becomeFirstResponder];
+//    if ( textField == self.readingTextField ) { [self.notesTextView becomeFirstResponder]; }
+//    if ( textField == self.notesTextView ) { [self yourLoginRoutine]; return YES; }
+//    return YES;
 //}
 
 - (IBAction)cancelMeasurementPressed:(UIButton *)sender {
