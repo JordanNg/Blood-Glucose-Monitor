@@ -10,6 +10,8 @@
 #import "BloodSugar+Create.h"
 #import "AAAppDelegate.h"
 
+static const NSInteger kNumLinePoints = 7;
+
 @interface AAViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *readings;
@@ -167,7 +169,7 @@
 - (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
     NSLog(@" number of lines %lu", (unsigned long)[self.lineGraphReadings count]);
     if (![self.lineGraphReadings count]) return 0;
-    return MIN(7, [self.lineGraphReadings count]); // Number of points in the graph.
+    return MIN(kNumLinePoints, [self.lineGraphReadings count]); // Number of points in the graph.
 }
 
 - (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
@@ -195,7 +197,8 @@
 
 - (void) setReadings:(NSArray *)readings{
     _readings = readings;
-    NSArray *smallArray = [readings subarrayWithRange:NSMakeRange(0, 7)];
+    NSInteger numReadings = MIN(kNumLinePoints, [readings count]);
+    NSArray *smallArray = [readings subarrayWithRange:NSMakeRange(0, numReadings)];
     
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:[smallArray count]];
     NSEnumerator *enumerator = [smallArray reverseObjectEnumerator];
